@@ -51,6 +51,10 @@ li {
   margin-bottom: 10px;
 }
 
+.header-wrap {
+  background-image: url(img/bg-header.png)
+}
+
 .composition-title {
   font-size: 13px;
   font-weight: 400;
