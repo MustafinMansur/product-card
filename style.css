@@ -51,6 +51,13 @@ li {
   margin-bottom: 10px;
 }
 
+.header-wrap {
+  background-image: url('img/dandelions-background.png');
+  background-repeat: no-repeat;
+  width: 790px;
+  height: 697px;
+}
+
 .composition-title {
   font-size: 13px;
   font-weight: 400;
