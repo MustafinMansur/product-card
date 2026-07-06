@@ -52,7 +52,10 @@ li {
 }
 
 .header-wrap {
-  background-image: url(img/bg-header.png)
+  background-image: url('img/dandelions-background.png');
+  background-repeat: no-repeat;
+  width: 790px;
+  height: 697px;
 }
 
 .composition-title {
