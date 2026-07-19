@@ -46,3 +46,20 @@ function outputConsoleLog(message) {
   alert(message)
   console.log(message)
 }
+
+// Вывод главного заголовка в консоль лог
+
+const outputeTitleInLog = document.querySelector('.intro__title');
+
+outputeTitleInLog.addEventListener('mouseover', function () {
+  console.log(outputeTitleInLog.textContent);
+});
+
+// Кнопка при клике меняющая цвет
+
+const btn = document.querySelector('#color-btn');
+
+btn.addEventListener('click', function () {
+  console.log('Цвет переключился');
+  btn.classList.toggle('btn--active');
+});
