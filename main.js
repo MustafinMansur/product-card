@@ -24,7 +24,6 @@ const openGoogleButton = document.querySelector('#open-google');
 const googleURL = 'https://google.com';
 
 openGoogleButton.addEventListener('click', openGoogle)
-  window.open('google.com')
 
 function openGoogle(){
   const answer = confirm('Вы действительно хотите открыть Google?')
