@@ -29,7 +29,7 @@ console.log(name);
 // задание:4
 
 function reverseArray(array) {
-  return array.reverse();
+  return [...array].reverse();
 }
 
 const reverseNumbers = reverseArray(numbers);
