@@ -181,4 +181,4 @@ const markManualCars = allCars.map((car) => {
   return car;
 });
 
-console.log(markManualCar);
+console.log(markManualCars);
