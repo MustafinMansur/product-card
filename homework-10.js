@@ -18,8 +18,8 @@ const getCardsCount = () => {
   const answer = prompt("Сколько карточек отобразить? От 1 до 5");
   const count = Number(answer);
 
-  if (isNaN(count) || count > 5 || count < 1) {
-    console.log("Введено некорректное значение");
+  if (isNaN(count) || count > 5 || count < 1 || !Number.isInteger(count)) {
+    alert("Введено некорректное значение");
     return NaN;
   }
 
