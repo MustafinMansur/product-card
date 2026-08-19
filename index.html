@@ -15,7 +15,26 @@
     <button id="open-google">Открыть страницу Google.com</button>
     <button id="output-console-log">Вывесте сообщение в консоль лог</button>
     <button id="color-btn" class="btn">Купить</button>
-    <div class="product-list">
+    <div id="product-list">
+  <template id="product-card-template">
+  <div class="product-card">
+    <div class="product-card__image">
+      <img src="" alt=""/>
+    </div>
+    <span class="product-card__skin-type"></span>
+    <h2 class="product-card__title"></h2>
+    <p class="product-card__text"></p>
+    <span class="product-card__composition-title">Состав:</span>
+    <ul class="product-card__composition-list">
+    </ul>
+    <div class="product-card__price">
+      <span class="product-card__price-label">Цена:</span>
+      <span class="product-card__price-value"></span>
+    </div>
+  </div>
+</template>
+    </div>
+    <!-- <div class="product-list">
       <div class="product-card">
         <div class="product-card__image">
           <img src="img/mousse.png" alt="Увлажняющий мусс"/>
@@ -111,10 +130,11 @@
           <span class="product-card__price-value">7 520 &#8381;</span>
         </div>
       </div>
-    </div>
+    </div>-->
   <script src="main.js"></script>
   <script src="homework-7.js"></script>
   <script src="homework-8.js"></script>
   <script type="module" src="homework-9.js"></script>
+  <script type="module" src="homework-10.js"></script>
   </body>
 </html>
