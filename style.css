@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -7,15 +9,31 @@
   src: url("fonts/Montserrat-Regular.ttf");
   font-weight: 400;
 }
- 
+
 @font-face {
   font-family: "Montserrat";
   src: url("fonts/Montserrat-Bold.ttf");
   font-weight: 700;
 }
- 
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-ExtraBold.ttf");
+  font-weight: 800;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+.main {
   padding: 40px;
 }
 
@@ -42,7 +60,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
- 
+
 .product-card {
   background-color: #f7f7fa;
   padding: 16px;
@@ -50,7 +68,7 @@ body {
   border-radius: 16px;
   border: 1px solid #515076;
 }
- 
+
 .product-card__image {
   background-color: white;
   border-radius: 16px;
@@ -60,13 +78,13 @@ body {
   margin-bottom: 30px;
   height: 245px;
 }
- 
+
 .product-card__image img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
- 
+
 .product-card__skin-type {
   font-size: 12px;
   font-weight: 400;
@@ -75,14 +93,14 @@ body {
   text-transform: uppercase;
   display: block;
 }
- 
+
 .product-card__title {
   font-size: 20px;
   font-weight: 700;
   line-height: 27px;
   color: #515076;
 }
- 
+
 .product-card__text {
   font-size: 13px;
   font-weight: 400;
@@ -90,18 +108,18 @@ body {
   color: #515076;
   margin-bottom: 15px;
 }
- 
+
 .product-card__composition-title {
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
   color: #515076;
 }
- 
+
 .product-card__composition-list {
   list-style-type: circle;
 }
- 
+
 .product-card__composition-item {
   font-size: 13px;
   font-weight: 400;
@@ -109,20 +127,20 @@ body {
   color: #515076;
   margin-bottom: 10px;
 }
- 
+
 .product-card__price {
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
 }
- 
+
 .product-card__price-label {
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
   color: #515076;
 }
- 
+
 .product-card__price-value {
   font-size: 20px;
   font-weight: 400;
@@ -136,4 +154,125 @@ body {
 
 .btn--active {
   background-color: tomato;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  transform: translate(-50%, -50%);
+}
+
+.modal-showed {
+  display: block;
+}
+
+.register-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #515076;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  background-color: #6a6894;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 10;
+}
+
+.overlay-showed {
+  display: block;
+}
+
+.modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #888888;
+  font-size: 34px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.modal__close:hover {
+  background-color: #f0f0f0;
+  color: #333333;
+}
+
+.modal__title {
+  margin: 0 0 20px;
+  font-size: 24px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.register-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.register-form input {
+  padding: 10px 12px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.register-form input:focus {
+  outline: none;
+  border-color: #515076;
+}
+
+.register-form__submit {
+  margin-top: 8px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #515076;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.register-form__submit:hover {
+  background-color: #6a6894;
 }
