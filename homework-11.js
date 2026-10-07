@@ -1,53 +1,51 @@
-const emailForm = document.querySelector("#email-form");
+import { Modal } from "./Modal.js";
+import { Form } from "./Form.js";
+
+const registerModal = new Modal("js-modal");
+const emailForm = new Form("email-form");
+const registerForm = new Form("register-form");
 
 const registerButton = document.querySelector("#js-register-btn");
-
-const modalWindow = document.querySelector("#js-modal");
-
 const closeButton = document.querySelector("#js-modal-close");
-
 const overlay = document.querySelector("#js-overlay");
-
-const registerForm = document.querySelector("#register-form");
 
 let user = null;
 
-emailForm.addEventListener("submit", (event) => {
+emailForm.form.addEventListener("submit", (event) => {
   event.preventDefault();
-  const form = event.target;
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData.entries());
+  const data = emailForm.getValues();
   console.log(data);
 });
 
 registerButton.addEventListener("click", () => {
-  modalWindow.classList.add("modal-showed");
+  registerModal.open();
   overlay.classList.add("overlay-showed");
 });
 
 closeButton.addEventListener("click", () => {
-  modalWindow.classList.remove("modal-showed");
   overlay.classList.remove("overlay-showed");
 });
 
-registerForm.addEventListener("submit", (event) => {
+registerForm.form.addEventListener("submit", (event) => {
   event.preventDefault();
-  if (!registerForm.checkValidity()) {
+
+  if (!registerForm.isValid()) {
     alert("Заполните все поля правильно");
     return;
   }
-  const password = registerForm.elements.password.value;
-  const passwordConfirm = registerForm.elements.passwordConfirm.value;
-  if ( password !== passwordConfirm) {
+
+  const userData = registerForm.getValues();
+
+  if (userData.password !== userData.passwordConfirm) {
     alert("Пароли не совпадают!");
     return;
   }
-  const formData = new FormData(registerForm);
-  const userData = Object.fromEntries(formData.entries());
+
   userData.createdOn = new Date();
   user = userData;
   console.log(userData);
-  modalWindow.classList.remove("modal-showed");
+
+  registerModal.close();
   overlay.classList.remove("overlay-showed");
   registerForm.reset();
 });
