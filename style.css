@@ -183,11 +183,26 @@ body {
   background-color: #515076;
   color: #ffffff;
   font-family: inherit;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
 }
 
 .register-btn:hover {
+  background-color: #6a6894;
+}
+
+.auth-btn {
+    padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #515076;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.auth-btn:hover {
   background-color: #6a6894;
 }
 
@@ -235,32 +250,37 @@ body {
   font-size: 24px;
 }
 
-.register-form {
+.register-form,
+.auth-form {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.register-form__field {
+.register-form__field,
+.auth-form__field {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-.register-form input {
+.register-form input,
+.auth-form input {
   padding: 10px 12px;
   border: 1px solid #cccccc;
   border-radius: 8px;
   font-family: inherit;
-  font-size: 15px;
+  font-size: 20px;
 }
 
-.register-form input:focus {
+.register-form input:focus,
+.auth-form input:focus {
   outline: none;
   border-color: #515076;
 }
 
-.register-form__submit {
+.register-form__submit,
+.auth-form__submit {
   margin-top: 8px;
   padding: 12px;
   border: none;
@@ -268,11 +288,12 @@ body {
   background-color: #515076;
   color: #ffffff;
   font-family: inherit;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
   transition: background-color 0.2s;
 }
 
-.register-form__submit:hover {
+.register-form__submit:hover,
+.auth-form__submit:hover {
   background-color: #6a6894;
 }

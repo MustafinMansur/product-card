@@ -1,13 +1,10 @@
 import { Modal } from "./Modal.js";
 import { Form } from "./Form.js";
 
-const registerModal = new Modal("js-modal");
+const registerModal = new Modal("js-modal", "js-register-btn", true);
+const authModal = new Modal("js-auth-modal", "js-auth-btn", false)
 const emailForm = new Form("email-form");
 const registerForm = new Form("register-form");
-
-const registerButton = document.querySelector("#js-register-btn");
-const closeButton = document.querySelector("#js-modal-close");
-const overlay = document.querySelector("#js-overlay");
 
 let user = null;
 
@@ -15,15 +12,6 @@ emailForm.form.addEventListener("submit", (event) => {
   event.preventDefault();
   const data = emailForm.getValues();
   console.log(data);
-});
-
-registerButton.addEventListener("click", () => {
-  registerModal.open();
-  overlay.classList.add("overlay-showed");
-});
-
-closeButton.addEventListener("click", () => {
-  overlay.classList.remove("overlay-showed");
 });
 
 registerForm.form.addEventListener("submit", (event) => {
@@ -46,6 +34,5 @@ registerForm.form.addEventListener("submit", (event) => {
   console.log(userData);
 
   registerModal.close();
-  overlay.classList.remove("overlay-showed");
   registerForm.reset();
 });
