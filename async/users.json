@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Ivan",
+      "surname": "Petrov",
+      "email": "ivan.petrov@example.com",
+      "age": 28,
+      "city": "Moscow",
+      "position": "Frontend Developer"
+    },
+    {
+      "id": 2,
+      "name": "Anna",
+      "surname": "Smirnova",
+      "email": "anna.smirnova@example.com",
+      "age": 34,
+      "city": "Kazan",
+      "position": "UI/UX Designer"
+    },
+    {
+      "id": 3,
+      "name": "Dmitry",
+      "surname": "Volkov",
+      "email": "dmitry.volkov@example.com",
+      "age": 41,
+      "city": "Saint Petersburg",
+      "position": "Backend Developer"
+    },
+    {
+      "id": 4,
+      "name": "Elena",
+      "surname": "Kuznetsova",
+      "email": "elena.kuznetsova@example.com",
+      "age": 25,
+      "city": "Ufa",
+      "position": "QA Engineer"
+    },
+    {
+      "id": 5,
+      "name": "Anton",
+      "surname": "Bogdanov",
+      "email": "anton.bogdanov@example.com",
+      "age": 30,
+      "city": "Ekaterinburg",
+      "position": "Project Manager"
+    }
+  ]
+}

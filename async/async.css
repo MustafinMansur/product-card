@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  background-color: #f3f4f6;
+}
+
+.users-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 60px 20px;
+}
+
+.users-page__title {
+  margin: 0;
+  font-size: 44px;
+}
+
+.users-page__status {
+  margin: 0;
+  color: #6b7280;
+}
+
+.users-page__controls {
+  display: flex;
+  gap: 16px;
+}
+
+.users-page__button {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #2563eb;
+  cursor: pointer;
+}
+
+.users-page__button:hover {
+  background-color: #1d4ed8;
+}
+
+.users-page__button--danger {
+  background-color: #dc2626;
+}
+
+.users-page__button--danger:hover {
+  background-color: #b91c1c;
+}
+
+.users-page__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.users-page__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 240px;
+  padding: 28px;
+  border-radius: 16px;
+  background-color: #ffffff;
+}
+
+.users-page__card-name {
+  margin: 0;
+  font-weight: bold;
+}
+
+.users-page__card-button {
+  padding: 8px 18px;
+  border: 1px solid #dc2626;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #dc2626;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.users-page__card-button:hover {
+  color: #ffffff;
+  background-color: #dc2626;
+}
